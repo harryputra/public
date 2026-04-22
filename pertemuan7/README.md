@@ -86,6 +86,7 @@ Salin seluruh folder `public/` ke dalam folder web server kamu:
 | WAMP64 | `C:\wamp64\www\` |
 
 Sehingga strukturnya menjadi:
+
 ```
 htdocs/
 └── pertemuan7/
@@ -102,7 +103,7 @@ Navigasi ke folder `perpustakaan/` lalu **double-click** file `setup.bat`:
 htdocs/pertemuan7/perpustakaan/setup.bat
 ```
 
-Script **Antigravity One-Click Setup** ini akan otomatis:
+Script **One-Click Setup** ini akan otomatis:
 
 1. 🛡️ **Auto-Elevation**: Meminta izin Administrator secara otomatis (UAC) jika diperlukan.
 2. 🔍 **Smart Discovery**: Mencari lokasi PHP dan MySQL secara otomatis (XAMPP/Laragon).
@@ -128,12 +129,14 @@ Script **Antigravity One-Click Setup** ini akan otomatis:
 ### Langkah B – Buat Database
 
 **Opsi 1 – phpMyAdmin:**
+
 1. Buka `http://localhost/phpmyadmin`
 2. Klik **Import** di menu atas
 3. Pilih file: `pertemuan7/perpustakaan/database/smartlib.sql`
 4. Klik **Go**
 
 **Opsi 2 – MySQL CLI:**
+
 ```bash
 mysql -u root -p < C:\xampp\htdocs\pertemuan7\perpustakaan\database\smartlib.sql
 ```
@@ -141,6 +144,7 @@ mysql -u root -p < C:\xampp\htdocs\pertemuan7\perpustakaan\database\smartlib.sql
 ### Langkah C – Seed Data
 
 Buka browser dan akses:
+
 ```
 http://localhost/pertemuan7/perpustakaan/install.php
 ```
@@ -274,6 +278,7 @@ Buat file `laporan_testing.md` (lihat [Format Laporan](#9-format-laporan)).
 ### Pengumpulan
 
 Kumpulkan dalam satu folder ZIP berisi:
+
 1. File project Selenium IDE (`.side`)
 2. File `test_case.md` yang sudah diperbarui (kolom status terisi)
 3. File `laporan_testing.md`
@@ -309,6 +314,7 @@ Kumpulkan dalam satu folder ZIP berisi:
 ### Menambahkan Assertions
 
 Klik kanan pada elemen di halaman saat recording → pilih:
+
 - `Assert text` – verifikasi teks pada elemen
 - `Assert element present` – verifikasi elemen ada
 - `Assert URL` – verifikasi URL halaman
@@ -404,11 +410,13 @@ Buat file `laporan_testing.md` dengan struktur berikut:
 ### Kriteria PASS / FAIL
 
 Sebuah test case dinyatakan **PASS** jika:
+
 - Semua command berjalan tanpa error
 - Semua assertions mengembalikan nilai `true`
 - Behavior aplikasi sesuai kolom "Hasil Diharapkan" di `test_case.md`
 
 Sebuah test case dinyatakan **FAIL** jika:
+
 - Ada command yang error / timeout
 - Ada assertion yang gagal
 - Aplikasi menampilkan output berbeda dari yang diharapkan
